@@ -1,7 +1,9 @@
 
 def is_prime(num)
-  (2..(num - 1)).each do |n|
-    return true if num % n == 0
+  n = 2
+  while n < num
+    return false if num % n == 0
+    n += 1
   end
-  is_prime(1) 
+  true
 end
